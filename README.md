@@ -11,7 +11,7 @@
 </div>
 
 <div align="justify">
-Este ecossistema de dados foi desenvolvido especificamente para a <b>Secretaria de Estado da Saúde da Paraíba (SES-PB)</b> com o intuito de modernizar e conferir maior agilidade ao fluxo de controle de inseticidas utilizados no combate às arboviroses. A solução elimina processos manuais e garante que a vigilância ambiental tenha acesso a informações precisas sobre o estoque de insumos químicos (BTI, Fludora, Alfacipermetrina) em todo o estado em tempo real.
+Este ecossistema de dados foi desenvolvido especificamente para a <b>Secretaria de Estado da Saúde da Paraíba (SES-PB)</b> com o intuito de modernizar e conferir maior agilidade ao fluxo de controle de inseticidas utilizados no combate a vetores. A solução elimina processos manuais e garante que a vigilância ambiental tenha acesso a informações precisas sobre o estoque de insumos químicos (BTI, Fludora, Alfacipermetrina) em todo o estado em tempo real.
 </div>
 
 ---
