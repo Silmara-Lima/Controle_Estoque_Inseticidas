@@ -1,30 +1,33 @@
-# SES-PB | Sistema de Estoque de Inseticidas
+<div align="center">
+  <img src="src/1-governo_paraiba.jpeg" width="140px" alt="Logo Governo da Paraíba">
+  <h1>🏥 Sistema de Gestão de Inseticidas (SES-PB)</h1>
+  
+  <p>
+    <img src="https://img.shields.io/badge/Google%20Apps%20Script-4285F4?style=for-the-badge&logo=google-apps-script&logoColor=white" alt="GAS">
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JS">
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML">
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS">
+  </p>
+</div>
 
-Sistema de controle de movimentação de inseticidas (recebimento e entrega) para as 12 Gerências Regionais de Saúde do Estado da Paraíba.
-
-## Descrição do Projeto
-
-Este projeto foi desenvolvido utilizando **Google Apps Script (GAS)**, **Google Sheets** e **HTML/CSS**. Ele permite que técnicos de todas as regionais insiram dados de forma padronizada através de um Web App, garantindo que as informações sejam registradas simultaneamente em uma planilha estadual (mestre) e na planilha específica da regional do usuário.
-
-## Funcionalidades
-
-- **Acesso Restrito:** Acesso limitado a usuários com contas Google autorizadas.
-- **Roteamento de Dados:** Os dados de cada GRS são enviados para planilhas isoladas e centralizados na planilha PB.
-- **Filtro em Cascata:** Seleção dinâmica de municípios com base na GRS selecionada (223 municípios mapeados).
-- **Validação Inteligente:** Bloqueio de datas futuras e alerta visual de produtos vencidos.
-
-## Instalação e Configuração
-
-Este projeto não requer instalação em servidor. Ele roda nativamente no ecossistema Google. Para replicar:
-
-1. Duplique a estrutura de 13 planilhas.
-2. Cole os IDs das planilhas no arquivo `Código.gs` no objeto `MAPA_PLANILHAS`.
-3. Publique o script como "App da Web".
-
-## Licença
-
-Este projeto é de autoria de **Silmara Pereira de Lima** e é licenciado sob a [Licença MIT](LICENSE).
+<div align="justify">
+Este ecossistema de dados foi desenvolvido especificamente para a <b>Secretaria de Estado da Saúde da Paraíba (SES-PB)</b> com o intuito de modernizar e conferir maior agilidade ao fluxo de controle de inseticidas utilizados no combate às arboviroses. A solução elimina processos manuais e garante que a vigilância ambiental tenha acesso a informações precisas sobre o estoque de insumos químicos (BTI, Fludora, Alfacipermetrina) em todo o estado em tempo real.
+</div>
 
 ---
 
-&copy; 2026 - Secretaria de Estado da Saúde da Paraíba - João Pessoa.
+## ⚙️ Arquitetura e Fluxo de Dados
+
+<div align="justify">
+O núcleo tecnológico do projeto reside em um algoritmo de roteamento inteligente implementado em <b>Google Apps Script</b>. Ao submeter um formulário, o sistema identifica a Gerência Regional de Saúde (GRS) de origem e realiza a gravação simultânea em dois destinos: na base de dados específica daquela regional e em uma planilha mestre estadual, garantindo integridade e isolamento dos dados.
+</div>
+
+<br>
+
+```mermaid
+graph TD
+    A[Formulário Web App] -->|Validação de Dados| B{Script de Roteamento}
+    B -->|Cópia Geral| C[(Planilha Mestre PB)]
+    B -->|Filtro por GRS| D[Planilhas Regionais 1 a 12]
+    D --> E[Relatórios Locais]
+    C --> F[Painel de Vigilância Estadual]
