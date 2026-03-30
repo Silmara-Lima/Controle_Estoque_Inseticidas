@@ -1,6 +1,6 @@
 <div align="center">
   <img src="src/1-governo_paraiba.jpeg" width="140px" alt="Logo Governo da Paraíba">
-  <h1>🏥 Sistema de Gestão de Inseticidas (SES-PB)</h1>
+  <h1>🏥 Sistema de Controle de Estoque de Inseticidas (SES-PB)</h1>
   
   <p>
     <img src="https://img.shields.io/badge/Google%20Apps%20Script-4285F4?style=for-the-badge&logo=google-apps-script&logoColor=white" alt="GAS">
