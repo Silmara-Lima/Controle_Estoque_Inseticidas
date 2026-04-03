@@ -441,7 +441,7 @@
       };
 
       window.onload = function () {
-        var hoje = new Date().toISOString().split("T")[0];
+        let hoje = new Date().toISOString().split("T")[0];
         document.getElementById("data").setAttribute("max", hoje);
       };
 
@@ -465,8 +465,8 @@
       }
 
       function atualizarPlaceholder() {
-        var produto = document.getElementById("prod").value;
-        var campoQnty = document.getElementById("qnty");
+        let produto = document.getElementById("prod").value;
+        let campoQnty = document.getElementById("qnty");
         if (produto === "BTI") campoQnty.placeholder = "Potes de 500g";
         else if (produto === "Fludora") campoQnty.placeholder = "Sachês";
         else if (produto === "Alfacipermetrina")
@@ -475,17 +475,17 @@
       }
 
       function toggleMuni() {
-        var tipo = document.getElementById("tipo").value;
-        var muni = document.getElementById("muni");
-        var grs = document.getElementById("grs").value;
+        let tipo = document.getElementById("tipo").value;
+        let muni = document.getElementById("muni");
+        let grs = document.getElementById("grs").value;
         muni.disabled = tipo === "Recebimento" || !grs;
         if (muni.disabled) muni.value = "";
       }
 
       function validarDataMov() {
-        var campo = document.getElementById("data");
-        var erro = document.getElementById("erroDataMov");
-        var hoje = new Date().toISOString().split("T")[0];
+        let campo = document.getElementById("data");
+        let erro = document.getElementById("erroDataMov");
+        let hoje = new Date().toISOString().split("T")[0];
         if (campo.value && campo.value > hoje) {
           alert("Data não válida");
           campo.classList.add("input-erro");
@@ -498,9 +498,9 @@
       }
 
       function validarValidade() {
-        var campo = document.getElementById("vali");
-        var erro = document.getElementById("erroValidade");
-        var hoje = new Date().toISOString().split("T")[0];
+        let campo = document.getElementById("vali");
+        let erro = document.getElementById("erroValidade");
+        let hoje = new Date().toISOString().split("T")[0];
         if (campo.value && campo.value < hoje) {
           campo.classList.add("input-erro");
           erro.style.display = "block";
@@ -511,9 +511,9 @@
       }
 
       function enviar() {
-        var btn = document.getElementById("btnEnviar");
-        var form = document.getElementById("meuForm");
-        var dados = {
+        let btn = document.getElementById("btnEnviar");
+        let form = document.getElementById("meuForm");
+        let dados = {
           grs: document.getElementById("grs").value,
           tipo: document.getElementById("tipo").value,
           data: document.getElementById("data").value,
